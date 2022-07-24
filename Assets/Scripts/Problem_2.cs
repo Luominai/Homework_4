@@ -12,6 +12,17 @@ public class Problem_2 : MonoBehaviour
         List<int> list = OnlyOddOnes(array);
 
         string output = "[";
+        foreach (int i in array)
+        {
+            output += i;
+            output += ", ";
+        }
+        output = output.Substring(0, output.Length - 2);
+        output += "]";
+
+        print("Before function: " + output);
+
+        output = "[";
         foreach (int i in list)
         {
             output += i;
@@ -19,6 +30,8 @@ public class Problem_2 : MonoBehaviour
         }
         output = output.Substring(0, output.Length - 2);
         output += "]";
+
+        print("After function: " + output);
     }
 
     //Create a function called OnlyOddOnes that takes in an int array as a parameter and returns 
